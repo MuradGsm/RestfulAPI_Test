@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ public.title }}</h1>
+    <h2>{{ public.cat_id.title }}</h2>
+    {% if public.description %}
+        <h4>{{ public.description }}</h4>
+    {% endif %}
+    <h3>{{ public.created_at }}</h3>
+{% endblock %}

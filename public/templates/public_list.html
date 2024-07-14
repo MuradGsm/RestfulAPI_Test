@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for public in publics %}
+        <h3>{{ public.title }}</h3>
+        {% if public.description %}
+            <p>{{ public.description }}</p>
+        {% endif %}
+        <h4><strong>{{ public.cat_id.title }}</strong></h4>
+        <h4>{{ public.created_at|time:"TIME_FORMAT" }}</h4>
+        <hr>
+    {% endfor %}
+{% endblock %}
